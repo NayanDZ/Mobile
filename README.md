@@ -7,12 +7,12 @@
 
 ## How Android Application tested?
 ### ***1. [Static Source Code Analysis](https://owasp.org/www-community/Source_Code_Analysis_Tools):***
-   - Checkmarx - Static Source Code Scanner that also scans source code for Android and iOS.
-   - Fortify - Static source code scanner that also scans source code for Android and iOS.
-   - Veracode - Static Analysis of iOS and Android binary
+  - Checkmarx - Static Source Code Scanner that also scans source code for Android and iOS.
+  - Fortify - Static source code scanner that also scans source code for Android and iOS.
+  - Veracode - Static Analysis of iOS and Android binary
 
 ### ***2. Static Analysis:***
-   - [AndroBugs](https://github.com/AndroBugs/AndroBugs_Framework): AndroBugs Framework is an efficient Android vulnerability scanner that helps developers or hackers find potential security vulnerabilities in Android applications. No need to install on Windows.
+  - [AndroBugs](https://github.com/AndroBugs/AndroBugs_Framework): AndroBugs Framework is an efficient Android vulnerability scanner that helps developers or hackers find potential security vulnerabilities in Android applications. No need to install on Windows.
   
     $ androbugs.py -f [APK file] 
  
@@ -34,3 +34,13 @@
         
 
 ### ***4. Dynamic and Runtime Analysis***
+  - **Android Debug Bridge:** adb is a versatile command-line tool that lets you communicate with a device. adb is a debugger targeting the Android platform’s Dalvik virtual machine intended for reverse engineers and developers
+    - adb devices – It is show connected device ```$ adb devices ``` 
+    - adb install – Install an apk file into an Emulated/Connected Device : ``` $ adb install [APK file] ```
+    - adb pull – It is used to fetch some data from Emulated device (remote) to local host (local).
+    - adb push – It is used to push some data from local host (local) to Emulated Device (remote).
+    - Adb shell – Adb provides shell on an emulator or connected device ``` adb shell ```
+      - Identifying application process using adb shell: ``` adb shell ps | grep -i "App keyword" ```
+      - Accessing the application using adb in order to identify loaded classes: ``` adb shell -p <process number> ```
+
+  - [Drozer](https://github.com/FSecureLABS/drozer): allows you to search for security vulnerabilities in apps and devices by assuming the role of an app and interacting with the Dalvik VM, other apps’ IPC endpoints and the underlying OS.
