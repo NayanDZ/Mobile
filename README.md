@@ -18,10 +18,19 @@
  
 ***3. Reverse Engineering (Decompiling)***
   - [APKTool](https://github.com/iBotPeaches/Apktool): A tool for reverse engineering 3rd party, closed, binary Android apps. It can decode resources to nearly original form and rebuild them after making some modifications.
-o	Disassembling Android apk file
-	apktool d <apk file>
-o	Rebuilding decoded resources back to binary APK/JAR with certificate signing
-	apktool b <modified folder>
+    Disassembling Android apk file:
+                  
+        apktool d [APK file]
+    
+    Rebuilding decoded resources back to binary APK/JAR with certificate signing
+	   
+        apktool b <modified folder>
+        
+        keytool -genkey -v -keystore keys/test.keystore -alias Test -keyalg RSA -keysize 1024 -sigalg SHA1withRSA -validity 10000
+        jarsigner -keystore keys/test.keystore dist/test.apk -sigalg SHA1withRSA -digestalg SHA1 Test
+  
+  - [Bytecode Viewer](https://github.com/Konloch/bytecode-viewer): is an Advanced Lightweight Java/Android Decompiler and Reverse Engineering Suite. BCV comes with 6 decompilers, 3 disassemblers, 2 assemblers, 2 APK converters, advanced searching, debugging.
 
+        
 
 ***4. Dynamic and Runtime Analysis***
