@@ -34,7 +34,7 @@
         
 
 ### ***4. Dynamic and Runtime Analysis***
-  - **[Drozer]**(https://github.com/FSecureLABS/drozer): allows you to search for security vulnerabilities in apps and devices by assuming the role of an app and interacting with the Dalvik VM, other apps’ IPC endpoints and the underlying OS.
+  - **[Drozer](https://github.com/FSecureLABS/drozer)**: allows you to search for security vulnerabilities in apps and devices by assuming the role of an app and interacting with the Dalvik VM, other apps’ IPC endpoints and the underlying OS.
   
   - **Android Debug Bridge:** adb is a versatile command-line tool that lets you communicate with a device. adb is a debugger targeting the Android platform’s Dalvik virtual machine intended for reverse engineers and developers
     - adb devices – It is show connected device ```$ adb devices ``` 
@@ -45,4 +45,17 @@
       - Identifying application process using adb shell: ``` adb shell ps | grep -i "App keyword" ```
       - Accessing the application using adb in order to identify loaded classes: ``` adb shell -p <process number> ```
 
-  
+ ### Some Important notes
+ ***Android Package (APK)*** is the default extension for the Android applications, which is just an archive file that contains all the necessary files and folders of the application.
+    
+   - All applications (apk files) in device can be found in ``` /data/app ``` directory.
+   - All Data of the application in the device can be found in ```/data/data``` directory.
+   - Standard permissions granted to the shell can be found in: ``` root@android: /system/etc/permissions # cat platform.xml ```
+ 
+ 
+ ***Hacks via ADB:*** We usually open our android device by unlocking various gesture pattern or password key.
+      If you remove ***gesture.Key*** or ***password.Key*** which located at ```data/system``` you can bypass that lock.
+ 
+
+
+  	
