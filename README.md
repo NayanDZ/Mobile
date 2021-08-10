@@ -56,6 +56,10 @@
  ***Hacks via ADB:*** We usually open our android device by unlocking various gesture pattern or password key.
       If you remove ***gesture.Key*** or ***password.Key*** which located at ```data/system``` you can bypass that lock.
  
+### ***5. Manual Testing:***  
+ **Step-1:** Setup proxy using ``Burp Suite`` tool and intercept traffic.
+ **Step-2:**If Application is SSL Pinned then we require to bypass SSL pinning of that application.
+ 
 
 
   	
