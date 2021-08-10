@@ -73,45 +73,41 @@
 
 	     > pip install frida-tools
 
+      **Step-3** [Download frida-server files](https://github.com/frida/frida/releases) (android-x86 or android-arm) according your device architecture
+	      
+      **Step-4** Push frida-server file into the device (i.e genymotion or physical device)
 
-Step:-3 Download frida-server files
-https://github.com/frida/frida/releases (4 Android files)
+             > adb push frida-server-12.7.24-android-x86 /data/local/tmp (Copy all 4 frida server in device)
 
+      **Step-5** Give 777 (read, Write, execute) permission of frida-server file.
 
-Step-4: Push 4 Android file into the device (genymotion)
->adb push frida-server-12.7.24-android-x86 /data/local/tmp (Copy all 4 frida server in device)
+	     > adb shell
+             > cd /data/local/tmp
+             > chmod 777 frida-server-12.7.24-android-x86
 
+      **Step-6** Start Firda Server
+      
+	     > adb shell
+	     > cd /data/local/tmp
+	     > ls -all (for list all the Files/Permission in present directory)
+             > ./frida-server-12.7.24-android-x86 (execute frida-server)
 
-Step:-5 Give 777 permission of all 4 file.
+      **Step-7** Now check all running process  
+	
+	     > frida-ps -U
 
->adb shell
->cd /data/local/tmp
->chmod 777 frida-server-12.7.24-android-x86 (give 777 permission of all 4 frida server)
-
-
-Step:-6 Start Firda Server
->adb shell
->cd /data/local/tmp
->ls (for list all frida server)
->./frida-server-12.7.24-android-x86
-
-
-Step:-7 Now check all running process  
->frida-ps -U
-
-
-Step:-8 create frida-ssl2.js file
-
-Java.perform(function() {
+      **Step-8** create frida-ssl2.js file
+	```
+	Java.perform(function() {
     var array_list = Java.use("java.util.ArrayList");
     var ApiClient = Java.use('com.android.org.conscrypt.TrustManagerImpl');
     ApiClient.checkTrustedRecursive.implementation = function(a1, a2, a3, a4, a5, a6) {
         // console.log('Bypassing SSL Pinning');
         var k = array_list.$new();
         return k;
-    }
-}, 0);
-
+          }
+         }, 0);
+       ```
 
 Step:-9 Hook application package 
 
