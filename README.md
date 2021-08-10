@@ -45,30 +45,33 @@
       - Identifying application process using adb shell: ``` adb shell ps | grep -i "App keyword" ```
       - Accessing the application using adb in order to identify loaded classes: ``` adb shell -p <process number> ```
 
- ### Some Important notes
- ***Android Package (APK)*** is the default extension for the Android applications, which is just an archive file that contains all the necessary files and folders of the application.
+    #### Some Important notes
     
-   - All applications (apk files) in device can be found in ``` /data/app ``` directory.
-   - All Data of the application in the device can be found in ```/data/data``` directory.
-   - Standard permissions granted to the shell can be found in: ``` root@android: /system/etc/permissions # cat platform.xml ```
+     ***Android Package (APK)*** is the default extension for the Android applications, which is just an archive file that contains all the necessary files and folders of the application.
+  
+     - All applications (apk files) in device can be found in ``` /data/app ``` directory.
+     - All Data of the application in the device can be found in ```/data/data``` directory.
+     - Standard permissions granted to the shell can be found in: ``` root@android: /system/etc/permissions # cat platform.xml ```
  
  
- ***Hacks via ADB:*** We usually open our android device by unlocking various gesture pattern or password key.
+     ***Hacks via ADB:*** We usually open our android device by unlocking various gesture pattern or password key.
       If you remove ***gesture.Key*** or ***password.Key*** which located at ```data/system``` you can bypass that lock.
  
 ### ***5. Manual Testing:***  
- **1.** Setup proxy using ``Burp Suite`` tool and intercept traffic.
+    
+   **1.** Setup proxy using ``Burp Suite`` tool and intercept traffic.
  
- **2.** If Application is SSL Pinned then we require to bypass SSL pinning of that application.
+   **2.** If Application is SSL Pinned then we require to bypass SSL pinning of that application.
  
- ***SSL Pinning bypass using Frida:***
- ***Step-1:Step:-1 Install Frida
- 
->pip install frida
->frida
+   ***SSL Pinning bypass using Frida:***
+   
+   ***Step-1:*** Install Frida
 
-
-Step:-2 Install Tools
+	> pip install frida 
+ 
+ 	> frida 
+	
+   ***Step-2*** Install Tools
 
 >pip install frida-tools
 >frida
