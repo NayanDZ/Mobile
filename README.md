@@ -75,7 +75,7 @@
 
       **Step-3** [Download frida-server files](https://github.com/frida/frida/releases) (android-x86 or android-arm) according your device architecture
 	      
-      **Step-4** Push frida-server file into the device (i.e genymotion or physical device)
+      **Step-4** Push frida-server file into the device (i.e emulator or physical device)
 
              > adb push frida-server-12.7.24-android-x86 /data/local/tmp (Copy all 4 frida server in device)
 
@@ -92,29 +92,29 @@
 	     > ls -all (for list all the Files/Permission in present directory)
              > ./frida-server-12.7.24-android-x86 (execute frida-server)
 
-      **Step-7** Now check all running process  
+      **Step-7** create frida-ssl2.js file
+       ```
+	     Java.perform(function()
+	     {
+               var array_list = Java.use("java.util.ArrayList");
+               var ApiClient = Java.use('com.android.org.conscrypt.TrustManagerImpl');
+               ApiClient.checkTrustedRecursive.implementation = function(a1, a2, a3, a4, a5, a6) 
+	       {
+                // console.log('Bypassing SSL Pinning');
+                var k = array_list.$new();
+                return k;
+               }
+             }, 0);
+       ```
+       **Step-7** Check all running process in Device or Emulator  
 	
 	     > frida-ps -U
+       
+       **Step-9** Hook application package 
 
-      **Step-8** create frida-ssl2.js file
-	```
-	Java.perform(function() {
-    var array_list = Java.use("java.util.ArrayList");
-    var ApiClient = Java.use('com.android.org.conscrypt.TrustManagerImpl');
-    ApiClient.checkTrustedRecursive.implementation = function(a1, a2, a3, a4, a5, a6) {
-        // console.log('Bypassing SSL Pinning');
-        var k = array_list.$new();
-        return k;
-          }
-         }, 0);
-       ```
+	     > frida -U -l frida-ssl-2.js --no-paus -f com.iifl.insurance
 
-Step:-9 Hook application package 
-
->frida -U -l frida-ssl-2.js --no-paus -f com.iifl.insurance
-
-
-Step:-10 Intercept the request using Burp Suite
+       **Step-10** Now you can intercept the request using Burp Suite 😸
 
 
   	
