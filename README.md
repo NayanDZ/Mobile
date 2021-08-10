@@ -67,54 +67,53 @@
    
       **Step-1:** Install Frida
 
-             > pip install frida 
+		 > pip install frida 
 	
       **Step-2** Install Frida Tools
 
-	     > pip install frida-tools
+		 > pip install frida-tools
 
       **Step-3** [Download frida-server files](https://github.com/frida/frida/releases) (android-x86 or android-arm) according your device architecture
 	      
       **Step-4** Push frida-server file into the device (i.e emulator or physical device)
 
-             > adb push frida-server-12.7.24-android-x86 /data/local/tmp (Copy all 4 frida server in device)
+		 > adb push frida-server-12.7.24-android-x86 /data/local/tmp (Copy all 4 frida server in device)
 
       **Step-5** Give 777 (read, Write, execute) permission of frida-server file.
 
-	     > adb shell
-             > cd /data/local/tmp
-             > chmod 777 frida-server-12.7.24-android-x86
+		 > adb shell
+		 > cd /data/local/tmp
+		 > chmod 777 frida-server-12.7.24-android-x86
 
       **Step-6** Start Firda Server
-      
-	     > adb shell
-	     > cd /data/local/tmp
-	     > ls -all (for list all the Files/Permission in present directory)
-             > ./frida-server-12.7.24-android-x86 (execute frida-server)
+     
+		 > adb shell
+		 > cd /data/local/tmp
+		 > ls -all (for list all the Files/Permission in present directory)
+		 > ./frida-server-12.7.24-android-x86 (execute frida-server)
 
       **Step-7** create frida-ssl2.js file
-       ```
-	     Java.perform(function()
-	     {
-               var array_list = Java.use("java.util.ArrayList");
-               var ApiClient = Java.use('com.android.org.conscrypt.TrustManagerImpl');
-               ApiClient.checkTrustedRecursive.implementation = function(a1, a2, a3, a4, a5, a6) 
-	       {
-                // console.log('Bypassing SSL Pinning');
-                var k = array_list.$new();
-                return k;
-               }
-             }, 0);
-       ```
-       **Step-7** Check all running process in Device or Emulator  
-	
-	     > frida-ps -U
        
-       **Step-9** Hook application package 
+       ````
+		 Java.perform(function() {
+		 var array_list = Java.use("java.util.ArrayList");
+		 var ApiClient = Java.use('com.android.org.conscrypt.TrustManagerImpl');
+		 ApiClient.checkTrustedRecursive.implementation = function(a1, a2, a3, a4, a5, a6) {
+		 // console.log('Bypassing SSL Pinning');
+		 var k = array_list.$new();
+		 return k; }
+		 }, 0);
+       ````
+       
+      **Step-8** Check all running process in Device or Emulator  
+	
+		 > frida-ps -U
+       
+      **Step-9** Hook application package 
 
-	     > frida -U -l frida-ssl-2.js --no-paus -f com.iifl.insurance
+		 > frida -U -l frida-ssl-2.js --no-paus -f com.iifl.insurance
 
-       **Step-10** Now you can intercept the request using Burp Suite 😸
+      **Step-10** Now you can intercept the request using Burp Suite 😸
 
 
   	
