@@ -57,9 +57,68 @@
       If you remove ***gesture.Key*** or ***password.Key*** which located at ```data/system``` you can bypass that lock.
  
 ### ***5. Manual Testing:***  
- **Step-1:** Setup proxy using ``Burp Suite`` tool and intercept traffic.
- **Step-2:**If Application is SSL Pinned then we require to bypass SSL pinning of that application.
+ **1.** Setup proxy using ``Burp Suite`` tool and intercept traffic.
  
+ **2.** If Application is SSL Pinned then we require to bypass SSL pinning of that application.
+ 
+ ***SSL Pinning bypass using Frida:***
+ ***Step-1:Step:-1 Install Frida
+ 
+>pip install frida
+>frida
+
+
+Step:-2 Install Tools
+
+>pip install frida-tools
+>frida
+
+
+Step:-3 Download frida-server files
+https://github.com/frida/frida/releases (4 Android files)
+
+
+Step-4: Push 4 Android file into the device (genymotion)
+>adb push frida-server-12.7.24-android-x86 /data/local/tmp (Copy all 4 frida server in device)
+
+
+Step:-5 Give 777 permission of all 4 file.
+
+>adb shell
+>cd /data/local/tmp
+>chmod 777 frida-server-12.7.24-android-x86 (give 777 permission of all 4 frida server)
+
+
+Step:-6 Start Firda Server
+>adb shell
+>cd /data/local/tmp
+>ls (for list all frida server)
+>./frida-server-12.7.24-android-x86
+
+
+Step:-7 Now check all running process  
+>frida-ps -U
+
+
+Step:-8 create frida-ssl2.js file
+
+Java.perform(function() {
+    var array_list = Java.use("java.util.ArrayList");
+    var ApiClient = Java.use('com.android.org.conscrypt.TrustManagerImpl');
+    ApiClient.checkTrustedRecursive.implementation = function(a1, a2, a3, a4, a5, a6) {
+        // console.log('Bypassing SSL Pinning');
+        var k = array_list.$new();
+        return k;
+    }
+}, 0);
+
+
+Step:-9 Hook application package 
+
+>frida -U -l frida-ssl-2.js --no-paus -f com.iifl.insurance
+
+
+Step:-10 Intercept the request using Burp Suite
 
 
   	
