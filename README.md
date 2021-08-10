@@ -63,18 +63,15 @@
  
    **2.** If Application is SSL Pinned then we require to bypass SSL pinning of that application.
  
-   ***SSL Pinning bypass using Frida:***
+   - ***SSL Pinning bypass using Frida:***
    
-   ***Step-1:*** Install Frida
+      **Step-1:** Install Frida
 
-	> pip install frida 
- 
- 	> frida 
+             > pip install frida 
 	
-   ***Step-2*** Install Tools
+      **Step-2** Install Frida Tools
 
->pip install frida-tools
->frida
+	     > pip install frida-tools
 
 
 Step:-3 Download frida-server files
