@@ -53,8 +53,11 @@
 
       - Accessing the application loaded classes using PID: ``` adb shell ps <process number> ```
       ![image](https://user-images.githubusercontent.com/65315090/129101117-12bbfea0-fb9b-4a41-87c4-c3be560f759e.png)
+          - UID – Every time a new application is initiated in the Android device, it is assigned a unique User ID
+          - PID – As every application has its own process id
+          - GID – group IDs of the application that owns that process
 
-    - adb logcat – is collecting log of application activity **INSECURE LOGGING** ``` adb shell logcat ``` OR ```adb shell logcat | findstr "chrome"```
+    - adb logcat – is collecting log of application activity **INSECURE LOGGING**:``` adb shell logcat ``` OR ```adb shell logcat | findstr "chrome"```
 
     #### Some Important notes
     
