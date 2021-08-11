@@ -61,7 +61,8 @@
   
      - All applications (apk files) in device can be found in ``` /data/app ``` directory.
      - All Data of the application in the device can be found in ```/data/data``` directory.
-     ![image](https://user-images.githubusercontent.com/65315090/129094911-57796939-8059-473a-9461-7681323ee098.png)
+     ![image](https://user-images.githubusercontent.com/65315090/129102121-b1419759-c37c-4fe5-addb-6b0fea291c7c.png)
+
 
      - Standard permissions granted to the shell can be found in: ``` root@android: /system/etc/permissions # cat platform.xml ```
  
