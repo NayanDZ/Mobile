@@ -40,6 +40,9 @@
     - adb devices – It is show connected device ```$ adb devices ``` 
     - adb install – Install an apk file into an Emulated/Connected Device : ``` $ adb install [APK file] ```
     - adb pull – It is used to fetch some data from Emulated device (remote) to local host (local).
+    	          
+          > adb pull /data/app/[application name] D:/[Folder Name]
+          
     - adb push – It is used to push some data from local host (local) to Emulated Device (remote).
     - Adb shell – Adb provides shell on an emulator or connected device ``` adb shell ```
       - Identifying application process using adb shell: ``` adb shell ps | grep -i "App keyword" ```
@@ -51,6 +54,8 @@
   
      - All applications (apk files) in device can be found in ``` /data/app ``` directory.
      - All Data of the application in the device can be found in ```/data/data``` directory.
+     ![image](https://user-images.githubusercontent.com/65315090/129094911-57796939-8059-473a-9461-7681323ee098.png)
+
      - Standard permissions granted to the shell can be found in: ``` root@android: /system/etc/permissions # cat platform.xml ```
  
  
