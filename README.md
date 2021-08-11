@@ -47,13 +47,14 @@
 
           > adb push D:/[Foldername]/[Filename] /storage/self/primary/Download
           
-    - Adb shell – Adb provides shell on an emulator or connected device ``` adb shell ```
+    - adb shell – provides shell on connected emulator/device ``` adb shell ```
       - Identifying application PID (Process id) using ***findstr***: ``` adb shell ps | findstr "App keyword" ```
       ![image](https://user-images.githubusercontent.com/65315090/129099055-cf025f51-d1e6-4448-97d9-e7f7ec0c0bfe.png)
 
       - Accessing the application loaded classes using PID: ``` adb shell ps <process number> ```
       ![image](https://user-images.githubusercontent.com/65315090/129101117-12bbfea0-fb9b-4a41-87c4-c3be560f759e.png)
 
+    - adb logcat – is collecting log of application activity **INSECURE LOGGING** ``` adb shell logcat ``` || ```adb shell logcat | findstr "chrome"```
 
     #### Some Important notes
     
