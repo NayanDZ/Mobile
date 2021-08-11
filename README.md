@@ -14,7 +14,7 @@
 ### ***2. Static Analysis:***
   - [AndroBugs](https://github.com/AndroBugs/AndroBugs_Framework): AndroBugs Framework is an efficient Android vulnerability scanner that helps developers or hackers find potential security vulnerabilities in Android applications. No need to install on Windows.
   
-    $ androbugs.py -f [APK file] 
+        $ androbugs.py -f [APK file] 
  
 ### ***3. Reverse Engineering (Decompiling)***
   - [APKTool](https://github.com/iBotPeaches/Apktool): A tool for reverse engineering 3rd party, closed, binary Android apps. It can decode resources to nearly original form and rebuild them after making some modifications.
