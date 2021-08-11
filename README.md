@@ -48,7 +48,9 @@
           > adb push D:/[Foldername]/[Filename] /storage/self/primary/Download
           
     - Adb shell – Adb provides shell on an emulator or connected device ``` adb shell ```
-      - Identifying application process using adb shell: ``` adb shell ps | grep -i "App keyword" ```
+      - Identifying application process using adb shell: ``` adb shell ps | findstr "App keyword" ```
+      ![image](https://user-images.githubusercontent.com/65315090/129099055-cf025f51-d1e6-4448-97d9-e7f7ec0c0bfe.png)
+
       - Accessing the application using adb in order to identify loaded classes: ``` adb shell -p <process number> ```
 
     #### Some Important notes
