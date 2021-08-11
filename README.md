@@ -44,6 +44,9 @@
           > adb pull /data/app/[application name] D:/[Folder Name]
           
     - adb push – It is used to push some data from local host (local) to Emulated Device (remote).
+
+          > adb push D:/[Foldername]/[Filename] /storage/self/primary/Download
+          
     - Adb shell – Adb provides shell on an emulator or connected device ``` adb shell ```
       - Identifying application process using adb shell: ``` adb shell ps | grep -i "App keyword" ```
       - Accessing the application using adb in order to identify loaded classes: ``` adb shell -p <process number> ```
