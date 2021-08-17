@@ -30,7 +30,9 @@
         
         keytool -genkey -v -keystore keys/test.keystore -alias Test -keyalg RSA -keysize 1024 -sigalg SHA1withRSA -validity 10000
         jarsigner -keystore keys/test.keystore dist/test.apk -sigalg SHA1withRSA -digestalg SHA1 Test
-  
+	
+  - [Jadx](https://github.com/skylot/jadx): Dex to Java decompiler: Command line and GUI tools for produce Java source code from Android Dex and Apk files.
+   
   - [Bytecode Viewer](https://github.com/Konloch/bytecode-viewer): is an Advanced Lightweight Java/Android Decompiler and Reverse Engineering Suite. BCV comes with 6 decompilers, 3 disassemblers, 2 assemblers, 2 APK converters, advanced searching, debugging.
 
         
