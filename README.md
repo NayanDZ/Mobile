@@ -106,7 +106,7 @@
 		 > cd /data/local/tmp
 		 > chmod 777 frida-server-12.7.24-android-x86
 
-		![image](https://user-images.githubusercontent.com/65315090/130116833-3296f7a5-7256-4103-bdf9-3591a6d1a4dc.png)
+		![image](https://user-images.githubusercontent.com/65315090/130117146-04130cf7-b9ae-4db4-914e-f3967aec491c.png)
 
       **Step-6** Start Firda Server
      
