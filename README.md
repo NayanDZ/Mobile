@@ -141,4 +141,4 @@
 ### ***6. Automated pen-testing: all-in-one mobile app (Android / iOS / Windows)*** 
   ***[Mobile Security Framework (MobSF)](https://mobsf.github.io/docs/#/)***
 
-## [Vulnrable Application For Learning](https://github.com/OWASP/MSTG-Hacking-Playground/releases/tag/1.0)
+## 👨‍💻 [Vulnrable Application For Learning](https://github.com/OWASP/MSTG-Hacking-Playground/releases/tag/1.0)
