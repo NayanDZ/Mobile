@@ -16,7 +16,7 @@
   - Veracode - Static Analysis of iOS and Android binary
 
 ### ***2. Static Analysis:***
-  - [AndroBugs](https://github.com/AndroBugs/AndroBugs_Framework): AndroBugs Framework is an efficient Android vulnerability scanner that helps developers or hackers find potential security vulnerabilities in Android applications. No need to install on Windows.
+  - [AndroBugs](https://github.com/AndroBugs/AndroBugs_Framework): AndroBugs Framework is an efficient Android vulnerability scanner that helps developers or hackers find potential security vulnerabilities in Android applications. [Android-Manifest-File Analysis](https://www.briskinfosec.com/blogs/blogsdetail/Android-Manifest-File-Analysis-101)
   
         $ androbugs.py -f [APK file] 
  
