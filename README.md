@@ -63,8 +63,10 @@
           - UID – Every time a new application is initiated in the Android device, it is assigned a unique User ID
           - PID – As every application has its own process id
           - GID – group IDs of the application that owns that process
-
-    - adb logcat – is collecting log of application activity **INSECURE LOGGING**:``` adb shell logcat ``` OR ```adb shell logcat | findstr "chrome"```
+  
+       **INSECURE LOGGING**
+    
+    - adb logcat – is collecting log of application activity: ```adb shell logcat``` OR ```adb shell logcat | findstr "chrome"```
     
     - **[Pidcat](https://github.com/JakeWharton/pidcat)**: is alternative script of ADB Logcat with some of new features like filtering with specific apps or packages, colored output, etc.	
 
@@ -75,11 +77,13 @@
      - All applications (apk files) in device can be found in ``` /data/app ``` directory.
      - All Data of the application in the device can be found in ```/data/data``` directory.
      ![image](https://user-images.githubusercontent.com/65315090/129102121-b1419759-c37c-4fe5-addb-6b0fea291c7c.png)
-
-
+      
+       **Insecure Data  Storage**: Files that you create on internal storage are accessible only to your app. This protection is implemented by Android and is sufficient for most applications. But developers often use MODE_WORLD_READABLE and MODE_WORLD_WRITABLE to provide those files to some application but this doesn’t limit other apps (malicious) from accessing them.
+ ![image](https://user-images.githubusercontent.com/65315090/151498718-9455ebcc-2a66-4015-98c3-8e5a46e35fb3.png)
+	In the above picture you can see that all the files in the shared_prefs folder of FourGoats App is world readable. So malicious app can access the data of those files.
+     
      - Standard permissions granted to the shell can be found in: ``` root@android: /system/etc/permissions # cat platform.xml ```
- 
- 
+  
      ***Hacks via ADB:*** We usually open our android device by unlocking various gesture pattern or password key.
       If you remove ***gesture.Key*** or ***password.Key*** which located at ```data/system``` you can bypass that lock.
  
