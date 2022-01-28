@@ -65,6 +65,8 @@
           - GID – group IDs of the application that owns that process
 
     - adb logcat – is collecting log of application activity **INSECURE LOGGING**:``` adb shell logcat ``` OR ```adb shell logcat | findstr "chrome"```
+    
+    - **[Pidcat](https://github.com/JakeWharton/pidcat)**: is alternative script of ADB Logcat with some of new features like filtering with specific apps or packages, colored output, etc.	
 
     #### Some Important notes
     
