@@ -16,10 +16,19 @@
   - Veracode - Static Analysis of iOS and Android binary
 
 ### ***2. Static Analysis:***
-  - [AndroBugs](https://github.com/AndroBugs/AndroBugs_Framework): AndroBugs Framework is an efficient Android vulnerability scanner that helps developers or hackers find potential security vulnerabilities in Android applications. [Android-Manifest-File Analysis](https://www.briskinfosec.com/blogs/blogsdetail/Android-Manifest-File-Analysis-101)
+  - [AndroBugs](https://github.com/AndroBugs/AndroBugs_Framework): AndroBugs Framework is an efficient Android vulnerability scanner that helps developers or hackers find potential security vulnerabilities in Android applications. 
   
         $ androbugs.py -f [APK file] 
- 
+  - [Android-Manifest-File Analysis](https://www.briskinfosec.com/blogs/blogsdetail/Android-Manifest-File-Analysis-101)
+  	- Debug Mode Enabled
+  	- Broad cast Receiver Enabled
+  	- Allow Backup Enabled
+  	- Activity Bypass
+  	- Code Not Obfuscated
+  	- Hard Coded Sensitive Information
+  	- Root Detection Bypass
+  	- SSL Pinning Bypass
+
 ### ***3. Reverse Engineering (Decompiling)***
   - [APKTool](https://github.com/iBotPeaches/Apktool): A tool for reverse engineering 3rd party, closed, binary Android apps. It can decode resources to nearly original form and rebuild them after making some modifications.
     Disassembling Android apk file:
