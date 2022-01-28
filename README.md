@@ -65,8 +65,21 @@
           - GID – group IDs of the application that owns that process
 
     - adb logcat – is collecting log of application activity **INSECURE LOGGING**:``` adb shell logcat ``` OR ```adb shell logcat | findstr "chrome"```
+
+    #### Some Important notes
+    
+     ***Android Package (APK)*** is the default extension for the Android applications, which is just an archive file that contains all the necessary files and folders of the application.
   
-  - **[Pidcat](https://github.com/JakeWharton/pidcat)**: is alternative script of ADB Logcat with some of new features like filtering with specific apps or packages, colored output, etc.
+     - All applications (apk files) in device can be found in ``` /data/app ``` directory.
+     - All Data of the application in the device can be found in ```/data/data``` directory.
+     ![image](https://user-images.githubusercontent.com/65315090/129102121-b1419759-c37c-4fe5-addb-6b0fea291c7c.png)
+
+
+     - Standard permissions granted to the shell can be found in: ``` root@android: /system/etc/permissions # cat platform.xml ```
+ 
+ 
+     ***Hacks via ADB:*** We usually open our android device by unlocking various gesture pattern or password key.
+      If you remove ***gesture.Key*** or ***password.Key*** which located at ```data/system``` you can bypass that lock.
  
 ### ***5. Manual Testing:***  
     
