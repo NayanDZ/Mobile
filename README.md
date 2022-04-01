@@ -156,7 +156,7 @@
       **Step-10** Now you can intercept the request using Burp Suite 😸
 
 ### ***6. Automated pen-testing: all-in-one mobile app (Android(.apk) / iOS(.ipa) / Windows)*** 
-  ***[Mobile Security Framework (MobSF)](https://mobsf.github.io/docs/#/)***
+  ***[Mobile Security Framework (MobSF)](https://github.com/NayanDZ/Mobile/blob/main/MobSF.pdf)***
   
   ***[AppUse](https://drive.google.com/a/appsec-labs.com/uc?id=0BzINqM6JrF3JUEtGSDJPLTJkdmM&export=download)***
 
