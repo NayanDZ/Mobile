@@ -101,7 +101,7 @@
  
    **2.** If Application is SSL Pinned then we require to bypass SSL pinning of that application.
  
-   - ***SSL Pinning bypass using Frida:***
+   - [***SSL Pinning bypass using Frida:***](https://github.com/NayanDZ/Mobile/blob/main/Frida.pdf)
    
       **Step-1:** Install Frida
 
