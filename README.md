@@ -167,10 +167,12 @@
 
       **Step-10** Now you can intercept the request using Burp Suite 😸
 
-### ***6. Automated pen-testing: all-in-one mobile app (Android(.apk) / iOS(.ipa) / Windows)*** 
+### ***6. Automated testing distributions: all-in-one mobile app (Android(.apk) / iOS(.ipa) / Windows)*** 
   ***[Mobile Security Framework (MobSF)](https://github.com/NayanDZ/Mobile/blob/main/MobSF.pdf)***
   
   ***[AppUse](https://drive.google.com/a/appsec-labs.com/uc?id=0BzINqM6JrF3JUEtGSDJPLTJkdmM&export=download)***
-
+  ***[Appie](https://sourceforge.net/projects/appiefiles/)***
+  ***[Santoku](https://medium.com/@inmune7/android-pentest-lab-in-a-nutshell-ee60be8638d3)***
+ 
 
 ## 👨‍💻 [Vulnrable Application For Learning](https://github.com/OWASP/MSTG-Hacking-Playground/releases)
