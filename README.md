@@ -67,7 +67,9 @@
 
 ### ***4. Dynamic and Runtime Analysis***
   - **[Drozer](https://github.com/NayanDZ/Mobile/blob/main/Drozer.pdf)**: allows you to search for security vulnerabilities in apps and devices by assuming the role of an app and interacting with the Dalvik VM, other apps’ IPC endpoints and the underlying OS.
-  
+
+	https://resources.infosecinstitute.com/topic/android-penetration-tools-walkthrough-series-drozer/
+
   - **Android Debug Bridge:** adb is a versatile command-line tool that lets you communicate with a device. adb is a debugger targeting the Android platform’s Dalvik virtual machine intended for reverse engineers and developers
     - adb devices – It is show connected device ```$ adb devices ``` 
     - adb install – Install an apk file into an Emulated/Connected Device : ``` $ adb install [APK file] ```
