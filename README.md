@@ -52,7 +52,12 @@
         
         keytool -genkey -v -keystore keys/test.keystore -alias Test -keyalg RSA -keysize 1024 -sigalg SHA1withRSA -validity 10000
         jarsigner -keystore keys/test.keystore dist/test.apk -sigalg SHA1withRSA -digestalg SHA1 Test
-  - [De2Jar](https://github.com/pxb1988/dex2jar): A tool for converting .dex files to .class files (zipped as jar).
+  - [De2Jar](https://github.com/pxb1988/dex2jar): is mainly used to convert an APK file(.dex to .class ) into a zipped jar file containing reconstructed source code.
+
+    	dex2jar apkname.apk
+
+    Above we have converted the APK file into a jar file. Now you can open that jar file in JD-GUI and view that source code.
+    
   - [jadx-gui](https://github.com/skylot/jadx): Dex to Java decompiler: Command line and GUI tools for produce Java source code from Android Dex and Apk files.
     [What to Look for When Reverse Engineering Android Apps](https://www.nowsecure.com/blog/2020/02/26/what-to-look-for-when-reverse-engineering-android-apps/)
     
