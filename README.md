@@ -52,7 +52,7 @@
         
         keytool -genkey -v -keystore keys/test.keystore -alias Test -keyalg RSA -keysize 1024 -sigalg SHA1withRSA -validity 10000
         jarsigner -keystore keys/test.keystore dist/test.apk -sigalg SHA1withRSA -digestalg SHA1 Test
-  
+  - [De2Jar](https://github.com/pxb1988/dex2jar): A tool for converting .dex files to .class files (zipped as jar).
   - [jadx-gui](https://github.com/skylot/jadx): Dex to Java decompiler: Command line and GUI tools for produce Java source code from Android Dex and Apk files.
     [What to Look for When Reverse Engineering Android Apps](https://www.nowsecure.com/blog/2020/02/26/what-to-look-for-when-reverse-engineering-android-apps/)
     
@@ -167,11 +167,13 @@
 
       **Step-10** Now you can intercept the request using Burp Suite 😸
 
-### ***6. Automated testing distributions: all-in-one mobile app (Android(.apk) / iOS(.ipa) / Windows)*** 
+### ***6. Automated testing distributions: all-in-one mobile app (Android(.apk) / iOS(.ipa) )*** 
   ***[Mobile Security Framework (MobSF)](https://github.com/NayanDZ/Mobile/blob/main/MobSF.pdf)***
   
   ***[AppUse](https://drive.google.com/a/appsec-labs.com/uc?id=0BzINqM6JrF3JUEtGSDJPLTJkdmM&export=download)***
+  
   ***[Appie](https://sourceforge.net/projects/appiefiles/)***
+  
   ***[Santoku](https://medium.com/@inmune7/android-pentest-lab-in-a-nutshell-ee60be8638d3)***
  
 
