@@ -4,7 +4,7 @@
 1. [Android Testing Guide](https://mobile-security.gitbook.io/mobile-security-testing-guide/android-testing-guide/0x05a-platform-overview)
 2. [iOS Testing Guide](https://mobile-security.gitbook.io/mobile-security-testing-guide/ios-testing-guide/0x06a-platform-overview)
 
-	### [OWASP Mobile Top 10 2016](https://owasp.org/www-project-mobile-top-10/)
+	### [OWASP Mobile Top 10 2023](https://owasp.org/www-project-mobile-top-10/)
 	- https://sectigostore.com/blog/owasp-mobile-top-10/
 	- https://medium.com/swlh/owasp-mobile-top-10-explained-with-real-world-examples-685c2f09e48c
 
