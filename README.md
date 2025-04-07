@@ -168,7 +168,7 @@
        
       **Step-9** Hook application package 
 
-		 > frida -U -l frida-ssl-2.js --no-paus -f com.iifl.insurance
+		 > frida -U -l frida-ssl-2.js --no-pause -f com.iifl.insurance
 
       **Step-10** Now you can intercept the request using Burp Suite 😸
 
